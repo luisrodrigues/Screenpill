@@ -1,0 +1,176 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,body {
+	height: 100%;
+	width: 100%;
+	font-family: sans-serif;
+	color: white;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.navbar {
+	width: 100%;
+	height: 70px;
+	background-color: purple;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.1);
+	position:fixed;
+	z-index: 1;
+}
+
+.menu {
+	width: 80%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#logo {
+	height: 50px;
+}
+
+.left-section-menu-item {
+	display: inline;
+	list-style-type: none;
+	margin-left: 30px;
+}
+
+.menu-item {
+	font-size: 16px;
+	letter-spacing: 2px;
+	list-style-type: none;
+}
+
+.opacity:hover {
+	filter: opacity(50%);
+	cursor: pointer;
+}
+
+.border {
+	border: 1.5px solid white;
+	padding: 6px 10px;
+	border-radius: 500px;
+	letter-spacing: 1px;
+}
+
+.content-wrapper {
+	height: 100%;
+	width: 100%;
+}
+
+.left-section {
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 15%;
+	height: 100%;
+	top: 70px;
+	border-collapse: collapse;
+	position: fixed;
+	flex-direction: column;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.profile_pic {
+	width: 110px;
+	border-radius: 50%;
+	margin-top: 50px;
+	box-shadow: 3px 3px 20px 0px rgba(0,0,0,0.5);
+}
+
+.profile_name {
+	margin-top: 15px;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+.left-section-menu {
+	margin-top: 50px;
+}
+
+.left-section-menu-item {
+	display: block;
+	font-size: 22px;
+	margin-right: 30px;
+	margin-top: 10px;
+}
+
+.small {
+	font-size: 16px;
+}
+
+.left-section-menu-item:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.main {
+	background-color: rgba(0, 0, 0, 0.2);
+	width: 85%;
+	min-height: 100%;
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	right: 0;
+	top: 70px;
+	border-collapse: collapse;
+}
+
+#mobile-menu {
+	width: 30px;
+	display: none;
+}
+
+@media only screen and (max-width: 420px) {
+
+	#logo {
+		margin-left: 30px;
+		height: 35px;
+	}
+
+	.navbar {
+		z-index: 2;
+	}
+
+	.left-section {
+		display: none;
+		width: 60%;
+		z-index: 1;
+	}
+
+	.main {
+		left: 0;
+		width: 100%;
+		flex-direction: column;
+	}
+
+	.menu-item {
+		font-size: 14px;
+	}
+
+	#mobile-menu {
+		display: block;
+	}
+
+	#mobile-menu:hover {
+		filter: opacity(50%);
+		cursor: pointer;
+	}
+
+	.left-section-menu {
+		margin-top: 18px;
+	}
+
+}
